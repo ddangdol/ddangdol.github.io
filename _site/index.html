@@ -5,29 +5,26 @@
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+<html lang="ko" class="no-js">
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Site Title</title>
-<meta name="description" content="An amazing website.">
+<!-- begin _includes/seo.html --><title>Superanddo</title>
+<meta name="description" content="소소한 개발 이야기">
 
 
-  <meta name="author" content="Your Name">
+  <meta name="author" content="Yeongseok Jang">
   
 
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Site Title">
-<meta property="og:title" content="Site Title">
-<meta property="og:url" content="/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Superanddo">
+<meta property="og:title" content="Superanddo">
+<meta property="og:url" content="ddangdol.github.io/">
 
 
-  <meta property="og:description" content="An amazing website.">
-
-
-
+  <meta property="og:description" content="소소한 개발 이야기">
 
 
 
@@ -36,12 +33,15 @@
 
 
 
-  
+
+
 
   
 
+  
 
-<link rel="canonical" href="/">
+
+<link rel="canonical" href="ddangdol.github.io/">
 
 
 
@@ -51,12 +51,14 @@
     "@context": "https://schema.org",
     
       "@type": "Person",
-      "name": "Your Name",
-      "url": "/"
+      "name": "Yeongseok Jang",
+      "url": "ddangdol.github.io/"
     
   }
 </script>
 
+
+  <meta name="google-site-verification" content="googled1af895d16f74374.html" />
 
 
 
@@ -66,7 +68,7 @@
 
 
 
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Site Title Feed">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Superanddo Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -102,6 +104,7 @@
 
 <!-- end custom head snippets -->
 
+    <script data-ad-client="ca-pub-1633964689856106" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
 
   <body class="layout--home">
@@ -126,15 +129,22 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/">
-          Site Title
+          Superanddo
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
             </li></ul>
         
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
+          <span class="visually-hidden">토글 메뉴</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -161,18 +171,18 @@
 
   <div class="author__content">
     
-      <h3 class="author__name" itemprop="name">Your Name</h3>
+      <h3 class="author__name" itemprop="name">Yeongseok Jang</h3>
     
     
       <div class="author__bio" itemprop="description">
-        <p>I am an <strong>amazing</strong> person.</p>
+        <p>열심히 공부중인 백엔드 개발자</p>
 
       </div>
     
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+    <button class="btn btn--inverse">팔로우</button>
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
@@ -266,7 +276,7 @@
     
     
 
-<h3 class="archive__subtitle">Recent posts</h3>
+<h3 class="archive__subtitle">최근 포스트</h3>
 
 
 
@@ -283,6 +293,17 @@
     </div>
 
     
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -292,7 +313,7 @@
         <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>Follow:</strong></li>
+      <li><strong>팔로우:</strong></li>
     
 
     
@@ -312,12 +333,12 @@
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2021 Your Name. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Yeongseok Jang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -327,6 +348,10 @@
 
 
 
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
