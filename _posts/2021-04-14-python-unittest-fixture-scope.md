@@ -1,3 +1,8 @@
+---
+layout: posts
+title: python unittest 의 fixture scope
+---
+
 ## python testing tool ##
 python 에는 널리 알려져 사용되는 여러 도구들이 이미 많습니다. 특히 pytest 는 좀 더 직관적인 assert 구문과 test 결과를 제공하며, 많은 plugin 을 보유하고 있습니다. 하지만 여러 도구들을 알아보기 전에 python testing에 기반이 되는 unittest 프레임워크의 개념과 사용법에 대해 알아보겠습니다.
 
