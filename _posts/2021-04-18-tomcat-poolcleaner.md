@@ -58,7 +58,7 @@ protected static class PoolCleaner extends TimerTask {
 ## Active 상태가 오래 지속중인 커넥션을 정리 ##
 
 ```xml
-<!-- Tomcat context.xml -->
+<!-- Tomcat context.xml removeAbandoned 설정 예시 -->
 
 <Context>
 	...
@@ -70,7 +70,6 @@ protected static class PoolCleaner extends TimerTask {
 	...
 </Context>
 ```
-<context.xml removeAbandoned 설정 예시>
 
 removeAbandoned 설정이 true 라면 PoolCleaner 는 오래 실행중인 Connection 을 체크하고 정리합니다. default 설정은 false 입니다. 실행 시간이 removeAbandonedTimeout 설정보다 길 경우 정리 대상으로 판단합니다.
 
@@ -89,12 +88,13 @@ public void checkAbandoned() {
 	...
 }
 ```
+
 이 때, 정리대상인 connection 에서 쿼리가 수행중일 수 있습니다. 이런 경우 의도치 않게 진행중인 쿼리가 종료될 수 있으므로 되도록 removeAbandonedTimeout 설정 값은 수행시간보다 큰 값을 사용도록 합니다.
 
 ---
 ## Idle Connection 사이즈를 조정 ##
 ```xml
-<!-- Tomcat context.xml -->
+<!-- Tomcat context.xml minIdle 설정 예시 -->
 
 <Context>
 	...
@@ -106,7 +106,6 @@ public void checkAbandoned() {
 	...
 </Context>
 ```
-<context.xml minIdle 설정 예시>
 
 Connection Pool 은 최초 InitialSize 만큼 생성되고 이후 Idle 커넥션을 minIdle 보다 작게 유지되도록 조정합니다.
 ```java
@@ -124,7 +123,7 @@ public void checkIdle(boolean ignoreMinSize) {
 ---
 ## Idle Connection 을 체크하고 wait_timeout 을 초기화 ##
 ```xml
-<!-- Tomcat context.xml -->
+<!-- Tomcat context.xml testWhileIdle 설정 예시 -->
 
 <Context>
 	...
@@ -137,7 +136,6 @@ public void checkIdle(boolean ignoreMinSize) {
 	...
 </Context>
 ```
-<context.xml testWhileIdle 설정 예시>
 
 testWhileIdle 이 true 라면 validationQuery 에 설정된 쿼리를 수행하여 Connection 의 이상유무를 판단합니다. 이를 통해 문제가 되는 Connection 을 제거하거나 DBMS 상의 Sleep Time 을 초기화시켜 wait_timeout 에 의해 해당 Connection 이 종료되는 것을 방지합니다.
 
@@ -186,6 +184,7 @@ GlobalNamingResource 를 사용하게 되면 모든 webapp 이 ConnectionPool �
 ![server.xml 의 GlobalNamingResource ConnectionPool 방식](/assets/images/tomcat-poolcleaner/image_05.png)
 
 ```xml
+<!-- GlobalNamingResource 사용 예제 -->
 <!-- server.xml -->
 <GlobalNamingResources ...>
   ...
@@ -203,14 +202,13 @@ GlobalNamingResource 를 사용하게 되면 모든 webapp 이 ConnectionPool �
   <res-auth>Container</res-auth>
 </resource-ref>
 ```
-<GlobalNamingResource 사용 예제>
 
 ### 3. CloseMethod 설정 활용 ###
 
 Resource 에 closeMethod 를 설정해주어 종료된 webapp 의 ConnectionPool 을 clean up 하는 방법이 있습니다.
 
 ```xml
-<!-- Tomcat context.xml -->
+<!-- Tomcat context.xml closeMethod 설정 예제 -->
 
 <Context>
 	...
@@ -221,7 +219,6 @@ Resource 에 closeMethod 를 설정해주어 종료된 webapp 의 ConnectionPool
 	...
 </Context>
 ```
-<context.xml closeMethod 설정 예제>
 
 위 설정을 사용하면 webapp reload 시 ConnectionPool 을 clean up 하기 위해 closeMethod 의 설정된 메소드를 사용하게 됩니다. 해당 메소드는 벤더사마다 다른 점에 유의합니다.
 
