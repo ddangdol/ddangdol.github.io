@@ -1,6 +1,7 @@
 ---
 layout: posts
 title: PoolCleaner 를 활용한 Connection Pool  최적화
+categories: [blog,]
 tags: [tomcat, connectionpool, poolcleaner]
 sitemap :
   priority : 1.0
