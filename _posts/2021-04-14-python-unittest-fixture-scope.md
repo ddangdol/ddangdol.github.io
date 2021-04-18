@@ -1,6 +1,9 @@
 ---
 layout: posts
 title: python unittest 의 fixture scope
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## python testing tool ##
