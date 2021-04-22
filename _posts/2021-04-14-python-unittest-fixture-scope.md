@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: python unittest 의 fixture scope
+tags: [python, unittest, fixture]
 sitemap :
-  changefreq : daily
   priority : 1.0
 ---
 
