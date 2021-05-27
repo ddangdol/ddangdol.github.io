@@ -337,8 +337,3 @@ moduleCleanUp
 ```
 ### 정리 ###
 python unittest를 사용해 테스트 작성 시 fixture 별 scope와 호출 시점과 조건을 잘 파악해야 합니다. 여러 scope의 fixture를 잘 활용하면 중복을 해결하고 테스트 성능에 도움이 되지만 잘못 사용할 경우 의도와 다른 테스트 결과가 출력될 수 있음에 주의하며 사용하는 것이 좋습니다.
-
----
-### 참고 ###
-* https://docs.python.org/ko/3/library/unittest.html
-

@@ -225,11 +225,3 @@ Resource 에 closeMethod 를 설정해주어 종료된 webapp 의 ConnectionPool
 ---
 ## 마치며 ##
 Tomcat 의 ConnectionPool 관리를 위한 기능 중 PoolCleaner 를 알아보았습니다. 문서상의 설정들이 실제 어떤식으로 동작하는지 확인하는 과정에서 오픈소스인 Tomcat 의 장점을 활용할 수 있었습니다. 특히 PoolCleaner 가 중지된 케이스의 원인은 오픈소스가 아니었다면 파악하기까지 오랜기간이 걸렸을 것입니다.
-
----
-## 참고 ##
-* https://tomcat.apache.org/tomcat-8.5-doc/jdbc-pool.html#Tomcat_JDBC_Enhanced_Attributes
-* https://tomcat.apache.org/tomcat-8.5-doc/class-loader-howto.html
-* https://github.com/apache/tomcat
-* https://d2.naver.com/helloworld/5102792
-* https://kakaocommerce.tistory.com/45

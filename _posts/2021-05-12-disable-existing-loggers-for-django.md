@@ -153,11 +153,4 @@ master process 는 django app 을 로드하지 않으므로 `gunicorn.access`, `
 ---
 
 ## 결론 ##
-대부분의 경우 disable_existing_loggers 값을 True 로 설정할 필요는 없으나 만약 필요한 경우 반드시 동작방식을 이해하고 사용하도록 합니다.
-
----
-
-## 참고 ##
-* [https://docs.djangoproject.com/en/3.2/topics/logging/](https://docs.djangoproject.com/en/3.2/topics/logging/)
-* [https://docs.python.org/ko/3/howto/logging.html](https://docs.python.org/ko/3/howto/logging.html)
-* [https://github.com/benoitc/gunicorn](https://github.com/benoitc/gunicorn)
+대부분의 경우 disable_existing_loggers 값을 True 로 설정할 필요는 없으나 만약 필요한 경우 반드시 동작방식을 이해하고 사용하도록 합니다
